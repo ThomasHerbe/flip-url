@@ -3,6 +3,8 @@
 Thanks for the challenge and the time you will allocate to review it.  
 Time spent: 2h
 
+Important: I assumed that the application would run in a dockerized environment. The Docker daemon needs to run to execute the tests and run the docker container.
+
 # Description
 I took the most forward approach to solve the challenge, using a REST API:
 - Accept a request with a long URL
