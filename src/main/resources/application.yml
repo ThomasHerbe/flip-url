@@ -1,0 +1,14 @@
+server:
+  shutdown: graceful
+  port: 8080
+spring:
+  application:
+    name: challenge
+  datasource:
+    url: jdbc:mysql://db:3306/challenge_db
+    username: root
+    password: root
+    name: challenge_db
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  flyway:
+    schemas: challenge_db

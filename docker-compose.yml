@@ -1,0 +1,24 @@
+services:
+  challenge:
+    image: challenge-fit:latest
+    restart: no
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    networks:
+      - service-network
+
+  db:
+    image: mysql:9.0.1
+    restart: on-failure
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: challenge_db
+    networks:
+      - service-network
+
+networks:
+  service-network:
